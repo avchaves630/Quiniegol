@@ -1,0 +1,7 @@
+Name,Username,Password,Email,Score,PreferredCountry,Insignias,Quinielas
+Adrian Chaves,avchaves,1234,anunez@example.com,24,Costa Rica,Líder de Mexico Vs CR 🥇,League1;506
+Daniel Vega,dvegavi,1234,gvillagra@example.com,15,Spain,,League1;506
+Gustavo Aguilar,gaguilarj,123,kmata@example.com,37,Uruguay,Líder Global 👑,League2
+Admin,admin,admin123,admin@quiniegol.com,0,Costa Rica,Peor Global 🗑️;Peor de Mundialistas de Corazon 💀;Peor de Desafio de Oficina 💀;Peor de Grupo de Amigos 💀;Peor de Expertos Futboleros 💀;Peor de Pica la Bola 💀;Peor de Peores del Barrio 💀,League1
+Test User,test,test123,test@example.com,0,Spain,Peor Global 🗑️;Peor de Mundialistas de Corazon 💀,League1
+Danilo Meneses,dmenesesb,1234,dmenesesb@gmail.com,0,Chile,Peor Global 🗑️;Peor de Mexico Vs CR 💀,506
