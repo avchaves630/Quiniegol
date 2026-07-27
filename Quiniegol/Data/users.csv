@@ -1,34 +1,34 @@
 Name,Username,Password,Email,Score,PreferredCountry,Insignias,Quinielas
-Adrian Chaves,avchaves,1234,anunez@example.com,24,Costa Rica,Líder de Mexico Vs CR 🥇,League1;506
+Adrian Chaves,avchaves,1234,anunez@example.com,29,Costa Rica,Líder de Mexico Vs CR 🥇,League1;506
 Daniel Vega,dvegavi,1234,gvillagra@example.com,15,Spain,,League1;506
 Gustavo Aguilar,gaguilarj,123,kmata@example.com,37,Uruguay,Líder Global 👑,League2
 Admin,admin,admin123,admin@quiniegol.com,0,Costa Rica,Peor Global 🗑️;Peor de Mundialistas de Corazon 💀;Peor de Desafio de Oficina 💀;Peor de Grupo de Amigos 💀;Peor de Expertos Futboleros 💀;Peor de Pica la Bola 💀;Peor de Peores del Barrio 💀,League1
 Test User,test,test123,test@example.com,0,Spain,Peor Global 🗑️;Peor de Mundialistas de Corazon 💀,League1
 Danilo Meneses,dmenesesb,1234,dmenesesb@gmail.com,0,Chile,Peor Global 🗑️;Peor de Mexico Vs CR 💀,506
-Fabiola Binns,fbinns,1234,fbinns@gmail.com,0,Australia,Peor Global 🗑️,
+Fabiola Binns,fbinns,1234,fbinns@gmail.com,2,Australia,,507
 Pedro Solera,psolera,1234,psolera@gmail.com,0,Mexico,Peor Global 🗑️,
 Adriana Vargas,avargas,1234,avargas@gmail.com,0,Sudafrica,Peor Global 🗑️,
-Arnoldo Sanchez,asanchez,1234,asanchez@gmail.com,0,Suiza,Peor Global 🗑️,
-Melina Mata,mmata,1234,mmata@gmail.com,0,Haiti,Peor Global 🗑️,
+Arnoldo Sanchez,asanchez,1234,asanchez@gmail.com,2,Suiza,Líder de Fanaticos 🥇,508
+Melina Mata,mmata,1234,mmata@gmail.com,2,Haiti,,511;509;510
 Fernando Torres,ftorres,1234,ftorres@gmail.com,0,Canada,Peor Global 🗑️,
-Carlos Maia,cmaia,1234,cmaia@gmail.com,0,Turquia,Peor Global 🗑️,
-Frederick augus,faugus,1234,faugus@gmail.com,0,Mexico,Peor Global 🗑️,
-Miguel Osorio,mosorio,1234,mosorio@gmail.com,0,Suiza,Peor Global 🗑️,
-Ale Otarola,aotarola,1234,aotarola@gmail.com,0,Escocia,Peor Global 🗑️,
-Angelica Rivas,arivas,1234,arivas@gmail.com,0,Australia,Peor Global 🗑️,
-Carlos Mendez,cmendez,1234,cmendez@gmail.com,0,Mexico,Peor Global 🗑️,
-Marez,mlopez,1234,mlopez@gmail.com,0,Sudafrica,Peor Global 🗑️,
-Josi Vargas,jvargas,1234,jvargas@gmail.com,0,Corea del Sur,Peor Global 🗑️,
-Luis Navarro,lnavarro,1234,lnavarro@gmail.com,0,Haiti,Peor Global 🗑️,
-Karla Murillo,kmurillo,1234,kmurillo@gmail.com,0,Haiti,Peor Global 🗑️,
+Carlos Maia,cmaia,1234,cmaia@gmail.com,0,Turquia,Peor Global 🗑️;Peor de Mexico Vs CR 💀;Peor de Fanaticos 💀;Peor de Los fiebres 💀;Peor de Turrialbeños 💀,509;506;508;511
+Frederick augus,faugus,1234,faugus@gmail.com,0,Mexico,Peor Global 🗑️;Peor de Mexico Vs CR 💀;Peor de Fanaticos 💀,508;506
+Miguel Osorio,mosorio,1234,mosorio@gmail.com,0,Suiza,Peor Global 🗑️;Peor de Mexico Vs CR 💀;Peor de Amigos 💀;Peor de Barra brava 💀,506;507;510
+Ale Otarola,aotarola,1234,aotarola@gmail.com,2,Escocia,,509
+Angelica Rivas,arivas,1234,arivas@gmail.com,0,Australia,Peor Global 🗑️;Peor de Mexico Vs CR 💀;Peor de Fanaticos 💀;Peor de Los fiebres 💀,506;509;508
+Carlos Mendez,cmendez,1234,cmendez@gmail.com,0,Mexico,Peor Global 🗑️;Peor de Fanaticos 💀;Peor de Los fiebres 💀;Peor de Barra brava 💀,509;508;510
+Marez,mlopez,1234,mlopez@gmail.com,7,Sudafrica,Rey de los Empates 🤝;Líder de Amigos 🥇;Líder de Barra brava 🥇;Líder de Turrialbeños 🥇,511;510;507
+Josi Vargas,jvargas,1234,jvargas@gmail.com,5,Corea del Sur,Rey de los Empates 🤝;Líder de Los fiebres 🥇,507;511;509
+Luis Navarro,lnavarro,1234,lnavarro@gmail.com,2,Haiti,,507;506;511;510
+Karla Murillo,kmurillo,1234,kmurillo@gmail.com,0,Haiti,Peor Global 🗑️;Peor de Barra brava 💀,510
 Pablo Campos,pcampos,1234,pcampos@gmail.com,0,Escocia,Peor Global 🗑️,
-Diana Pacheco,dpacheco,1234,dpacheco@gmail.com,0,Escocia,Peor Global 🗑️,
+Diana Pacheco,dpacheco,1234,dpacheco@gmail.com,2,Escocia,Rey de los Empates 🤝,
 Bryan Gonzalez,bgonzalez,1234,bgonzalez@gmail.com,0,Estados Unidos,Peor Global 🗑️,
 Melissa Soto,msoto,1234,msoto@gmail.com,0,Estados Unidos,Peor Global 🗑️,
 Adrin Vega,avega,1234,avega@gmail.com,0,Paraguay,Peor Global 🗑️,
 Jessica Aguilar,jaguilar,1234,jaguilar@gmail.com,0,Paraguay,Peor Global 🗑️,
 Marco Cordero,mcordero,1234,mcordero@gmail.com,0,Australia,Peor Global 🗑️,
-Veronica Ulate,vulate,1234,vulate@gmail.com,0,Australia,Peor Global 🗑️,
+Veronica Ulate,vulate,1234,vulate@gmail.com,2,Australia,,
 Diego Calderon,dcalderon,1234,dcalderon@gmail.com,0,Turquia,Peor Global 🗑️,
 Daniela Segura,dsegura,1234,dsegura@gmail.com,0,Turquia,Peor Global 🗑️,
 Alejandro Montero,amontero,1234,amontero@gmail.com,0,Mexico,Peor Global 🗑️,
@@ -52,7 +52,7 @@ Victor Alpizar,valpizar,1234,valpizar@gmail.com,0,Australia,Peor Global 🗑️,
 Marisol Quesada,mquesada,1234,mquesada@gmail.com,0,Australia,Peor Global 🗑️,
 Eduardo Carvajal,ecarvajal,1234,ecarvajal@gmail.com,0,Turquia,Peor Global 🗑️,
 Roxana Fernandez,rfernandez,1234,rfernandez@gmail.com,0,Turquia,Peor Global 🗑️,
-Sergio Aguilar,saguilar,1234,saguilar@gmail.com,0,Mexico,Peor Global 🗑️;Peor de Mexico Vs CR 💀,506
+Sergio Aguilar,saguilar,1234,saguilar@gmail.com,5,Mexico,Rey de los Empates 🤝,506
 Yadira Fallas,yfallas,1234,yfallas@gmail.com,0,Sudafrica,Peor Global 🗑️,
 Kevin Duarte,kduarte,1234,kduarte@gmail.com,0,Canada,Peor Global 🗑️,
 Priscila Rojas,projas2,1234,projas2@gmail.com,0,Brasil,Peor Global 🗑️,
