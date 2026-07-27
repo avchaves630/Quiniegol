@@ -18,11 +18,35 @@ namespace Quiniegol.Models
 
         public Prediction(string[] props)
         {
-            this.Username = props[0];
-            this.MatchId = int.Parse(props[1]);
-            this.PredictedHomeScore = int.Parse(props[2]);
-            this.PredictedAwayScore = int.Parse(props[3]);
-            this.DateCreated = DateTime.Parse(props[4]);
+            this.Username = props.Length > 0 ? props[0].Trim() : string.Empty;
+
+            int matchId = 0;
+            if (props.Length > 1 && !string.IsNullOrWhiteSpace(props[1]) && int.TryParse(props[1].Trim(), out int parsedId))
+            {
+                matchId = parsedId;
+            }
+            this.MatchId = matchId;
+
+            int homeP = 0;
+            if (props.Length > 2 && !string.IsNullOrWhiteSpace(props[2]) && int.TryParse(props[2].Trim(), out int parsedHome))
+            {
+                homeP = parsedHome;
+            }
+            this.PredictedHomeScore = homeP;
+
+            int awayP = 0;
+            if (props.Length > 3 && !string.IsNullOrWhiteSpace(props[3]) && int.TryParse(props[3].Trim(), out int parsedAway))
+            {
+                awayP = parsedAway;
+            }
+            this.PredictedAwayScore = awayP;
+
+            DateTime dt = DateTime.Now;
+            if (props.Length > 4 && !string.IsNullOrWhiteSpace(props[4]) && DateTime.TryParse(props[4].Trim(), out DateTime parsedDt))
+            {
+                dt = parsedDt;
+            }
+            this.DateCreated = dt;
         }
 
         public string Username { get; set; }

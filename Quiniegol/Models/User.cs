@@ -15,31 +15,39 @@ namespace Quiniegol.Models
             this.Username = username;
             this.Password = password;
             this.Email = email;
-            this.Score = int.Parse(score);
+            int.TryParse(score, out int parsedScore);
+            this.Score = parsedScore;
             this.PreferredCountry = preferredCountry;
-            this.Insignias = string.IsNullOrEmpty(insignias) ? new List<string>() : insignias.Split(';').ToList();
-            this.Quinielas = string.IsNullOrEmpty(quinielas) ? new List<string>() : quinielas.Split(';').ToList();
+            this.Insignias = string.IsNullOrEmpty(insignias) ? new List<string>() : insignias.Split(';').Select(s => s.Trim()).Where(s => !string.IsNullOrEmpty(s)).ToList();
+            this.Quinielas = string.IsNullOrEmpty(quinielas) ? new List<string>() : quinielas.Split(';').Select(s => s.Trim()).Where(s => !string.IsNullOrEmpty(s)).ToList();
         }
 
         public User(string[] props)
         {
-            this.Name = props[0];
-            this.Username = props[1];
-            this.Password = props[2];
-            this.Email = props[3];
-            this.Score = int.Parse(props[4]);
-            this.PreferredCountry = props.Length > 5 ? props[5] : string.Empty;
+            this.Name = props.Length > 0 ? props[0].Trim() : string.Empty;
+            this.Username = props.Length > 1 ? props[1].Trim() : string.Empty;
+            this.Password = props.Length > 2 ? props[2].Trim() : string.Empty;
+            this.Email = props.Length > 3 ? props[3].Trim() : string.Empty;
+
+            int score = 0;
+            if (props.Length > 4 && !string.IsNullOrWhiteSpace(props[4]) && int.TryParse(props[4].Trim(), out int parsedScore))
+            {
+                score = parsedScore;
+            }
+            this.Score = score;
+
+            this.PreferredCountry = props.Length > 5 ? props[5].Trim() : string.Empty;
 
             this.Insignias = new List<string>();
-            if (props.Length > 6 && !string.IsNullOrEmpty(props[6]))
+            if (props.Length > 6 && !string.IsNullOrWhiteSpace(props[6]))
             {
-                this.Insignias = props[6].Split(';').ToList();
+                this.Insignias = props[6].Split(';').Select(s => s.Trim()).Where(s => !string.IsNullOrEmpty(s)).ToList();
             }
 
             this.Quinielas = new List<string>();
-            if (props.Length > 7 && !string.IsNullOrEmpty(props[7]))
+            if (props.Length > 7 && !string.IsNullOrWhiteSpace(props[7]))
             {
-                this.Quinielas = props[7].Split(';').ToList();
+                this.Quinielas = props[7].Split(';').Select(s => s.Trim()).Where(s => !string.IsNullOrEmpty(s)).ToList();
             }
         }
 

@@ -16,8 +16,9 @@ namespace Quiniegol.Models
 
         public Team(string[] props)
         {
-            this.Name = props[0];
-            this.Group = props[1];
+            this.Name = props.Length > 0 ? props[0].Trim() : string.Empty;
+            this.Group = props.Length > 1 ? props[1].Trim() : string.Empty;
+            this.FlagEmoji = props.Length > 2 ? props[2].Trim() : string.Empty;
         }
 
         public string Name { get; set; }

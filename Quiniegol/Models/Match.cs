@@ -24,19 +24,60 @@ namespace Quiniegol.Models
 
         public Match(string[] props)
         {
-            this.Id = int.Parse(props[0]);
-            this.HomeTeam = props[1];
-            this.AwayTeam = props[2];
-            this.HomeScore = string.IsNullOrEmpty(props[3]) ? (int?)null : int.Parse(props[3]);
-            this.AwayScore = string.IsNullOrEmpty(props[4]) ? (int?)null : int.Parse(props[4]);
-            this.MatchDate = DateTime.Parse(props[5]);
-            this.Scorers = new List<string>();
-            if (props.Length > 6 && !string.IsNullOrEmpty(props[6]))
+            int id = 0;
+            if (props.Length > 0 && int.TryParse(props[0].Trim(), out int parsedId))
             {
-                this.Scorers = props[6].Split(';').ToList();
+                id = parsedId;
             }
-            this.IsFinished = props.Length > 7 && bool.Parse(props[7]);
-            this.Stage = props.Length > 8 ? props[8] : "Group";
+            this.Id = id;
+
+            this.HomeTeam = props.Length > 1 ? props[1].Trim() : string.Empty;
+            this.AwayTeam = props.Length > 2 ? props[2].Trim() : string.Empty;
+
+            if (props.Length > 3 && !string.IsNullOrWhiteSpace(props[3]) && int.TryParse(props[3].Trim(), out int hs))
+            {
+                this.HomeScore = hs;
+            }
+            else
+            {
+                this.HomeScore = null;
+            }
+
+            if (props.Length > 4 && !string.IsNullOrWhiteSpace(props[4]) && int.TryParse(props[4].Trim(), out int ascore))
+            {
+                this.AwayScore = ascore;
+            }
+            else
+            {
+                this.AwayScore = null;
+            }
+
+            DateTime dt = DateTime.Now;
+            if (props.Length > 5 && !string.IsNullOrWhiteSpace(props[5]) && DateTime.TryParse(props[5].Trim(), out DateTime parsedDt))
+            {
+                dt = parsedDt;
+            }
+            this.MatchDate = dt;
+
+            this.Scorers = new List<string>();
+            if (props.Length > 6 && !string.IsNullOrWhiteSpace(props[6]))
+            {
+                this.Scorers = props[6].Split(';').Select(s => s.Trim()).Where(s => !string.IsNullOrEmpty(s)).ToList();
+            }
+
+            bool isFinished = false;
+            if (props.Length > 7 && !string.IsNullOrWhiteSpace(props[7]) && bool.TryParse(props[7].Trim(), out bool parsedFin))
+            {
+                isFinished = parsedFin;
+            }
+            this.IsFinished = isFinished;
+
+            string stage = "Group";
+            if (props.Length > 8 && !string.IsNullOrWhiteSpace(props[8]))
+            {
+                stage = props[8].Split(';')[0].Trim();
+            }
+            this.Stage = stage;
         }
 
         public int Id { get; set; }

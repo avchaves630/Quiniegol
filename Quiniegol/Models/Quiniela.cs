@@ -21,21 +21,28 @@ namespace Quiniegol.Models
 
         public Quiniela(string[] props)
         {
-            this.Id = props[0];
-            this.Name = props[1];
-            this.IsPrivate = bool.Parse(props[2]);
-            this.OwnerUsername = props[3];
+            this.Id = props.Length > 0 ? props[0].Trim() : string.Empty;
+            this.Name = props.Length > 1 ? props[1].Trim() : string.Empty;
+
+            bool isPriv = false;
+            if (props.Length > 2 && !string.IsNullOrWhiteSpace(props[2]) && bool.TryParse(props[2].Trim(), out bool parsedPriv))
+            {
+                isPriv = parsedPriv;
+            }
+            this.IsPrivate = isPriv;
+
+            this.OwnerUsername = props.Length > 3 ? props[3].Trim() : string.Empty;
 
             this.MemberUsernames = new List<string>();
-            if (props.Length > 4 && !string.IsNullOrEmpty(props[4]))
+            if (props.Length > 4 && !string.IsNullOrWhiteSpace(props[4]))
             {
-                this.MemberUsernames = props[4].Split(';').ToList();
+                this.MemberUsernames = props[4].Split(';').Select(s => s.Trim()).Where(s => !string.IsNullOrEmpty(s)).ToList();
             }
 
             this.NotificationTimeline = new List<string>();
-            if (props.Length > 5 && !string.IsNullOrEmpty(props[5]))
+            if (props.Length > 5 && !string.IsNullOrWhiteSpace(props[5]))
             {
-                this.NotificationTimeline = props[5].Split(';').ToList();
+                this.NotificationTimeline = props[5].Split(';').Select(s => s.Trim()).Where(s => !string.IsNullOrEmpty(s)).ToList();
             }
         }
 

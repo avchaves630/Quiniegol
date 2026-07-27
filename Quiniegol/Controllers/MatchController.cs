@@ -35,7 +35,7 @@ namespace Quiniegol.Controllers
 
         public List<Match> Matches { get; private set; }
         public List<Team> Teams { get; private set; }
-        public DateTime SimulatedSystemDate { get; set; } = new DateTime(2026, 7, 30, 12, 0, 0);
+        public DateTime SimulatedSystemDate { get; set; } = new DateTime(2026, 7, 25, 14, 0, 0);
 
         public MatchController(IDataHandler<Match> matchHandler, IDataHandler<Team> teamHandler, string matchesPath, string teamsPath)
         {
