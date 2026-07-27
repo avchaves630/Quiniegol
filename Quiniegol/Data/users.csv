@@ -1,6 +1,6 @@
 Name,Username,Password,Email,Score,PreferredCountry,Insignias,Quinielas
-Adrian Chaves,avchaves,1234,anunez@example.com,29,Costa Rica,Líder de Mexico Vs CR 🥇,League1;506
-Daniel Vega,dvegavi,1234,gvillagra@example.com,15,Spain,,League1;506
+Adrian Chaves,avchaves,1234,anunez@example.com,31,Costa Rica,Rey de los Empates 🤝;Líder de Mexico Vs CR 🥇,League1;506
+Daniel Vega,dvegavi,1234,gvillagra@example.com,15,Spain,Líder de Amigos 🥇;Líder de Los fiebres 🥇;Líder de Barra brava 🥇,League1;506;509;510;507
 Gustavo Aguilar,gaguilarj,123,kmata@example.com,37,Uruguay,Líder Global 👑,League2
 Admin,admin,admin123,admin@quiniegol.com,0,Costa Rica,Peor Global 🗑️;Peor de Mundialistas de Corazon 💀;Peor de Desafio de Oficina 💀;Peor de Grupo de Amigos 💀;Peor de Expertos Futboleros 💀;Peor de Pica la Bola 💀;Peor de Peores del Barrio 💀,League1
 Test User,test,test123,test@example.com,0,Spain,Peor Global 🗑️;Peor de Mundialistas de Corazon 💀,League1
@@ -17,8 +17,8 @@ Miguel Osorio,mosorio,1234,mosorio@gmail.com,0,Suiza,Peor Global 🗑️;Peor de
 Ale Otarola,aotarola,1234,aotarola@gmail.com,2,Escocia,,509
 Angelica Rivas,arivas,1234,arivas@gmail.com,0,Australia,Peor Global 🗑️;Peor de Mexico Vs CR 💀;Peor de Fanaticos 💀;Peor de Los fiebres 💀,506;509;508
 Carlos Mendez,cmendez,1234,cmendez@gmail.com,0,Mexico,Peor Global 🗑️;Peor de Fanaticos 💀;Peor de Los fiebres 💀;Peor de Barra brava 💀,509;508;510
-Marez,mlopez,1234,mlopez@gmail.com,7,Sudafrica,Rey de los Empates 🤝;Líder de Amigos 🥇;Líder de Barra brava 🥇;Líder de Turrialbeños 🥇,511;510;507
-Josi Vargas,jvargas,1234,jvargas@gmail.com,5,Corea del Sur,Rey de los Empates 🤝;Líder de Los fiebres 🥇,507;511;509
+Marez,mlopez,1234,mlopez@gmail.com,7,Sudafrica,Rey de los Empates 🤝;Líder de Turrialbeños 🥇,511;510;507
+Josi Vargas,jvargas,1234,jvargas@gmail.com,5,Corea del Sur,Rey de los Empates 🤝,507;511;509
 Luis Navarro,lnavarro,1234,lnavarro@gmail.com,2,Haiti,,507;506;511;510
 Karla Murillo,kmurillo,1234,kmurillo@gmail.com,0,Haiti,Peor Global 🗑️;Peor de Barra brava 💀,510
 Pablo Campos,pcampos,1234,pcampos@gmail.com,0,Escocia,Peor Global 🗑️,
@@ -34,7 +34,7 @@ Daniela Segura,dsegura,1234,dsegura@gmail.com,0,Turquia,Peor Global 🗑️,
 Alejandro Montero,amontero,1234,amontero@gmail.com,0,Mexico,Peor Global 🗑️,
 Cindy Villalobos,cvillalobos,1234,cvillalobos@gmail.com,0,Brasil,Peor Global 🗑️,
 Mauricio Fonseca,mfonseca,1234,mfonseca@gmail.com,0,Canada,Peor Global 🗑️,
-Rebeca Zamora,rzamora,1234,rzamora@gmail.com,0,Estados Unidos,Peor Global 🗑️,
+Rebeca Zamora,rzamora,1234,rzamora@gmail.com,5,Estados Unidos,Rey de los Empates 🤝,513;514
 Steven Alvarado,salvarado,1234,salvarado@gmail.com,0,Australia,Peor Global 🗑️,
 Yessenia Duarte,yduarte,1234,yduarte@gmail.com,0,Bosnia y Herzegovina,Peor Global 🗑️,
 Cristian Gomez,cgomez,1234,cgomez@gmail.com,0,Catar,Peor Global 🗑️,
