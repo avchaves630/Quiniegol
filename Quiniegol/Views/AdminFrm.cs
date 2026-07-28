@@ -42,7 +42,7 @@ namespace Quiniegol.Views
             var list = MatchController.Matches.Select(m => new {
                 m.Id,
                 Partido = $"{m.HomeTeam} vs {m.AwayTeam}",
-                Fase = m.Stage,
+                Grupos = m.Stage,
                 Estado = m.IsFinished ? "Finalizado" : "Pendiente",
                 Marcador = m.IsFinished ? $"{m.HomeScore} - {m.AwayScore}" : "-"
             }).ToList();

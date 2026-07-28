@@ -119,7 +119,7 @@ namespace Quiniegol.Views
                     m.Id,
                     Partido = $"{m.HomeTeam} vs {m.AwayTeam}",
                     Fecha = m.MatchDate.ToString("yyyy-MM-dd HH:mm"),
-                    Fase = m.Stage,
+                    Grupos = m.Stage,
                     MiPronostico = userPred != null ? $"{userPred.PredictedHomeScore} - {userPred.PredictedAwayScore}" : "No realizado"
                 };
             }).ToList();
@@ -242,7 +242,7 @@ namespace Quiniegol.Views
                     Partido = $"{m.HomeTeam} vs {m.AwayTeam}",
                     Marcador = $"{m.HomeScore} - {m.AwayScore}",
                     Anotadores = m.Scorers != null ? string.Join(", ", m.Scorers) : "",
-                    Fase = m.Stage
+                    Grupos = m.Stage
                 }).ToList();
             dgvLast5.DataSource = last5;
 
@@ -253,7 +253,7 @@ namespace Quiniegol.Views
                     Id = m.Id,
                     Fecha = m.MatchDate.ToString("yyyy-MM-dd HH:mm"),
                     Partido = $"{m.HomeTeam} vs {m.AwayTeam}",
-                    Fase = m.Stage
+                    Grupos = m.Stage
                 }).ToList();
             dgvNext24.DataSource = next24;
 
@@ -295,7 +295,7 @@ namespace Quiniegol.Views
                 .Where(m => knockoutStages.Contains(m.Stage, StringComparer.OrdinalIgnoreCase))
                 .OrderBy(m => m.Id)
                 .Select(m => new {
-                    Fase = m.Stage,
+                    Grupos = m.Stage,
                     Partido = $"{m.HomeTeam} vs {m.AwayTeam}",
                     Marcador = m.IsFinished ? $"{m.HomeScore} - {m.AwayScore}" : "Pendiente",
                     Anotadores = m.Scorers.Count > 0 ? string.Join(", ", m.Scorers) : "",
