@@ -178,7 +178,7 @@ namespace Quiniegol.Views
             // 
             // btnStats
             // 
-            this.btnStats.Location = new System.Drawing.Point(670, 26);
+            this.btnStats.Location = new System.Drawing.Point(670, 35);
             this.btnStats.Name = "btnStats";
             this.btnStats.Size = new System.Drawing.Size(100, 40);
             this.btnStats.TabIndex = 5;
