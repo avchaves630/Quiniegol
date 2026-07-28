@@ -169,7 +169,7 @@ namespace Quiniegol.Views
             this.lblAwayTeamName.Name = "lblAwayTeamName";
             this.lblAwayTeamName.Size = new System.Drawing.Size(68, 13);
             this.lblAwayTeamName.TabIndex = 2;
-            this.lblAwayTeamName.Text = "Away Team";
+            this.lblAwayTeamName.Text = "Equipo Visita";
             // 
             // lblHomeTeamName
             // 
@@ -178,7 +178,7 @@ namespace Quiniegol.Views
             this.lblHomeTeamName.Name = "lblHomeTeamName";
             this.lblHomeTeamName.Size = new System.Drawing.Size(71, 13);
             this.lblHomeTeamName.TabIndex = 1;
-            this.lblHomeTeamName.Text = "Home Team";
+            this.lblHomeTeamName.Text = "Equipo Local";
             // 
             // lblEditTitle
             // 

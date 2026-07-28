@@ -304,7 +304,7 @@ namespace Quiniegol.Views
             this.lblAwayPredTeam.Name = "lblAwayPredTeam";
             this.lblAwayPredTeam.Size = new System.Drawing.Size(63, 13);
             this.lblAwayPredTeam.TabIndex = 3;
-            this.lblAwayPredTeam.Text = "Away Team";
+            this.lblAwayPredTeam.Text = "Equipo Visita";
             // 
             // lblHomePredTeam
             // 
@@ -313,7 +313,7 @@ namespace Quiniegol.Views
             this.lblHomePredTeam.Name = "lblHomePredTeam";
             this.lblHomePredTeam.Size = new System.Drawing.Size(65, 13);
             this.lblHomePredTeam.TabIndex = 2;
-            this.lblHomePredTeam.Text = "Home Team";
+            this.lblHomePredTeam.Text = "Equipo Local";
             // 
             // dgvPredictionsMatches
             // 
