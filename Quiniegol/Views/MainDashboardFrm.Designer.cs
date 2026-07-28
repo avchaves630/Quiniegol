@@ -178,7 +178,7 @@ namespace Quiniegol.Views
             // 
             // btnStats
             // 
-            this.btnStats.Location = new System.Drawing.Point(670, 20);
+            this.btnStats.Location = new System.Drawing.Point(670, 26);
             this.btnStats.Name = "btnStats";
             this.btnStats.Size = new System.Drawing.Size(100, 40);
             this.btnStats.TabIndex = 5;
@@ -188,7 +188,7 @@ namespace Quiniegol.Views
             // 
             // btnAdmin
             // 
-            this.btnAdmin.Location = new System.Drawing.Point(776, 20);
+            this.btnAdmin.Location = new System.Drawing.Point(776, 26);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(100, 40);
             this.btnAdmin.TabIndex = 4;
@@ -198,7 +198,7 @@ namespace Quiniegol.Views
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(882, 20);
+            this.btnLogout.Location = new System.Drawing.Point(882, 26);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(90, 40);
             this.btnLogout.TabIndex = 3;
