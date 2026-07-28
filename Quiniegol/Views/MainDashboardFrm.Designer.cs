@@ -96,6 +96,7 @@ namespace Quiniegol.Views
             // 
             // pnlSidebar
             // 
+            this.pnlSidebar.Controls.Add(this.btnStats);
             this.pnlSidebar.Controls.Add(this.btnNavLeagues);
             this.pnlSidebar.Controls.Add(this.btnNavRankings);
             this.pnlSidebar.Controls.Add(this.btnNavMatches);
@@ -164,7 +165,6 @@ namespace Quiniegol.Views
             // 
             // pnlHeader
             // 
-            this.pnlHeader.Controls.Add(this.btnStats);
             this.pnlHeader.Controls.Add(this.btnAdmin);
             this.pnlHeader.Controls.Add(this.btnLogout);
             this.pnlHeader.Controls.Add(this.lblDate);
@@ -178,7 +178,8 @@ namespace Quiniegol.Views
             // 
             // btnStats
             // 
-            this.btnStats.Location = new System.Drawing.Point(670, 35);
+            this.btnStats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnStats.Location = new System.Drawing.Point(12, 479);
             this.btnStats.Name = "btnStats";
             this.btnStats.Size = new System.Drawing.Size(100, 40);
             this.btnStats.TabIndex = 5;
@@ -188,7 +189,7 @@ namespace Quiniegol.Views
             // 
             // btnAdmin
             // 
-            this.btnAdmin.Location = new System.Drawing.Point(776, 26);
+            this.btnAdmin.Location = new System.Drawing.Point(776, 37);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(100, 40);
             this.btnAdmin.TabIndex = 4;
@@ -198,7 +199,7 @@ namespace Quiniegol.Views
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(882, 26);
+            this.btnLogout.Location = new System.Drawing.Point(882, 37);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(90, 40);
             this.btnLogout.TabIndex = 3;
@@ -302,7 +303,7 @@ namespace Quiniegol.Views
             this.lblAwayPredTeam.AutoSize = true;
             this.lblAwayPredTeam.Location = new System.Drawing.Point(395, 462);
             this.lblAwayPredTeam.Name = "lblAwayPredTeam";
-            this.lblAwayPredTeam.Size = new System.Drawing.Size(63, 13);
+            this.lblAwayPredTeam.Size = new System.Drawing.Size(68, 13);
             this.lblAwayPredTeam.TabIndex = 3;
             this.lblAwayPredTeam.Text = "Equipo Visita";
             // 
@@ -311,7 +312,7 @@ namespace Quiniegol.Views
             this.lblHomePredTeam.AutoSize = true;
             this.lblHomePredTeam.Location = new System.Drawing.Point(120, 462);
             this.lblHomePredTeam.Name = "lblHomePredTeam";
-            this.lblHomePredTeam.Size = new System.Drawing.Size(65, 13);
+            this.lblHomePredTeam.Size = new System.Drawing.Size(69, 13);
             this.lblHomePredTeam.TabIndex = 2;
             this.lblHomePredTeam.Text = "Equipo Local";
             // 
