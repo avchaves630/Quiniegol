@@ -1,11 +1,11 @@
 Name,Username,Password,Email,Score,PreferredCountry,Insignias,Quinielas
-Adrian Chaves,avchaves,1234,anunez@example.com,31,Costa Rica,Rey de los Empates 🤝;Líder de Mexico Vs CR 🥇;Líder de Fanaticos 🥇;Líder de Los fiebres 🥇,League1;506;508;509
+Adrian Chaves,avchaves,1234,anunez@example.com,31,Costa Rica,Rey de los Empates 🤝;Líder de Mexico Vs CR 🥇;Líder de Fanaticos 🥇;Líder de Los fiebres 🥇;Líder de Privada 🥇,League1;506;508;509;505
 Daniel Vega,dvegavi,1234,gvillagra@example.com,15,Spain,Líder de Amigos 🥇;Líder de Barra brava 🥇,League1;506;509;510;507
 Gustavo Aguilar,gaguilarj,123,kmata@example.com,37,Uruguay,Líder Global 👑,League2
 Admin,admin,admin123,admin@quiniegol.com,0,Costa Rica,Peor Global 🗑️;Peor de Mundialistas de Corazon 💀;Peor de Desafio de Oficina 💀;Peor de Grupo de Amigos 💀;Peor de Expertos Futboleros 💀;Peor de Pica la Bola 💀;Peor de Peores del Barrio 💀,League1
 Test User,test,test123,test@example.com,0,Spain,Peor Global 🗑️;Peor de Mundialistas de Corazon 💀,League1
-Danilo Meneses,dmenesesb,1234,dmenesesb@gmail.com,0,Chile,Peor Global 🗑️;Peor de Mexico Vs CR 💀,506
-Fabiola Binns,fbinns,1234,fbinns@gmail.com,2,Australia,,507
+Danilo Meneses,dmenesesb,1234,dmenesesb@gmail.com,5,Chile,Rey de los Empates 🤝,506
+Fabiola Binns,fbinns,1234,fbinns@gmail.com,2,Australia,Peor de Privada 💀,507;505
 Pedro Solera,psolera,1234,psolera@gmail.com,0,Mexico,Peor Global 🗑️,
 Adriana Vargas,avargas,1234,avargas@gmail.com,0,Sudafrica,Peor Global 🗑️,
 Arnoldo Sanchez,asanchez,1234,asanchez@gmail.com,2,Suiza,,508
@@ -42,7 +42,7 @@ Monica Nunez,mnunez,1234,mnunez@gmail.com,0,Suiza,Peor Global 🗑️,
 Cristopher Leon,cleon,1234,cleon@gmail.com,7,Marruecos,Rey de los Empates 🤝,
 Erick Porras,eporras,1234,eporras@gmail.com,0,Haiti,Peor Global 🗑️,
 Pamela Arias,parias,1234,parias@gmail.com,0,Haiti,Peor Global 🗑️,
-David Hidalgo,dhidalgo,1234,dhidalgo@gmail.com,0,Escocia,Peor Global 🗑️,
+David Hidalgo,dhidalgo,1234,dhidalgo@gmail.com,4,Escocia,Rey de los Empates 🤝,
 Lisbeth Ramirez,lramirez,1234,lramirez@gmail.com,0,Escocia,Peor Global 🗑️,
 Allan Brenes,abrenes,1234,abrenes@gmail.com,0,Estados Unidos,Peor Global 🗑️,
 Johanna Ruiz,jruiz,1234,jruiz@gmail.com,0,Estados Unidos,Peor Global 🗑️,
