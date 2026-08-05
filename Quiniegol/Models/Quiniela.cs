@@ -19,30 +19,30 @@ namespace Quiniegol.Models
             this.NotificationTimeline = notificationTimeline ?? new List<string>();
         }
 
-        public Quiniela(string[] props)
+        public Quiniela(string[] datos)
         {
-            this.Id = props.Length > 0 ? props[0].Trim() : string.Empty;
-            this.Name = props.Length > 1 ? props[1].Trim() : string.Empty;
+            this.Id = datos.Length > 0 ? datos[0].Trim() : string.Empty;
+            this.Name = datos.Length > 1 ? datos[1].Trim() : string.Empty;
 
             bool isPriv = false;
-            if (props.Length > 2 && !string.IsNullOrWhiteSpace(props[2]) && bool.TryParse(props[2].Trim(), out bool parsedPriv))
+            if (datos.Length > 2 && !string.IsNullOrWhiteSpace(datos[2]) && bool.TryParse(datos[2].Trim(), out bool parsedPriv))
             {
                 isPriv = parsedPriv;
             }
             this.IsPrivate = isPriv;
 
-            this.OwnerUsername = props.Length > 3 ? props[3].Trim() : string.Empty;
+            this.OwnerUsername = datos.Length > 3 ? datos[3].Trim() : string.Empty;
 
             this.MemberUsernames = new List<string>();
-            if (props.Length > 4 && !string.IsNullOrWhiteSpace(props[4]))
+            if (datos.Length > 4 && !string.IsNullOrWhiteSpace(datos[4]))
             {
-                this.MemberUsernames = props[4].Split(';').Select(s => s.Trim()).Where(s => !string.IsNullOrEmpty(s)).ToList();
+                this.MemberUsernames = datos[4].Split(';').Select(s => s.Trim()).Where(s => !string.IsNullOrEmpty(s)).ToList();
             }
 
             this.NotificationTimeline = new List<string>();
-            if (props.Length > 5 && !string.IsNullOrWhiteSpace(props[5]))
+            if (datos.Length > 5 && !string.IsNullOrWhiteSpace(datos[5]))
             {
-                this.NotificationTimeline = props[5].Split(';').Select(s => s.Trim()).Where(s => !string.IsNullOrEmpty(s)).ToList();
+                this.NotificationTimeline = datos[5].Split(';').Select(s => s.Trim()).Where(s => !string.IsNullOrEmpty(s)).ToList();
             }
         }
 

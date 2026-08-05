@@ -20,9 +20,14 @@ namespace Quiniegol.Views
         private PredictionController PredictionController { get; set; }
         private QuinielaController QuinielaController { get; set; }
 
-        public MainDashboardFrm(User user, UserController userController, MatchController matchController, PredictionController predictionController, QuinielaController quinielaController)
+        public MainDashboardFrm()
         {
             InitializeComponent();
+        }
+
+        public MainDashboardFrm(User user, UserController userController, MatchController matchController, PredictionController predictionController, QuinielaController quinielaController)
+            : this()
+        {
             this.CurrentUser = user;
             this.UserController = userController;
             this.MatchController = matchController;
@@ -32,7 +37,10 @@ namespace Quiniegol.Views
 
         private void MainDashboardFrm_Load(object sender, EventArgs e)
         {
-            btnAdmin.Visible = CurrentUser.Username.Equals("admin", StringComparison.OrdinalIgnoreCase);
+            if (DesignMode || System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime)
+                return;
+
+            btnAdmin.Visible = CurrentUser != null && CurrentUser.Username.Equals("admin", StringComparison.OrdinalIgnoreCase);
             cmbGroupSelect.SelectedIndex = 0;
             ShowPanel(pnlPredictions);
             RefreshAllData();
@@ -258,7 +266,6 @@ namespace Quiniegol.Views
             dgvNext24.DataSource = next24;
 
             RefreshGroupStandings();
-            RefreshBrackets();
         }
 
         private void RefreshGroupStandings()
@@ -286,23 +293,6 @@ namespace Quiniegol.Views
                 dgvGroupStandings.Columns["Pos"].Width = 40;
                 dgvGroupStandings.Columns["Seleccion"].HeaderText = "Selección";
             }
-        }
-
-        private void RefreshBrackets()
-        {
-            var knockoutStages = new[] { "Quarterfinals", "Semifinals", "Final" };
-            var list = MatchController.Matches
-                .Where(m => knockoutStages.Contains(m.Stage, StringComparer.OrdinalIgnoreCase))
-                .OrderBy(m => m.Id)
-                .Select(m => new {
-                    Grupos = m.Stage,
-                    Partido = $"{m.HomeTeam} vs {m.AwayTeam}",
-                    Marcador = m.IsFinished ? $"{m.HomeScore} - {m.AwayScore}" : "Pendiente",
-                    Anotadores = m.Scorers.Count > 0 ? string.Join(", ", m.Scorers) : "",
-                    Fecha = m.MatchDate.ToString("yyyy-MM-dd HH:mm")
-                }).ToList();
-
-            dgvBrackets.DataSource = list;
         }
 
         private void cmbGroupSelect_SelectedIndexChanged(object sender, EventArgs e)

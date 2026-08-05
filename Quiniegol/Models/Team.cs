@@ -14,11 +14,11 @@ namespace Quiniegol.Models
             this.FlagEmoji = flagEmoji;
         }
 
-        public Team(string[] props)
+        public Team(string[] datos)
         {
-            this.Name = props.Length > 0 ? props[0].Trim() : string.Empty;
-            this.Group = props.Length > 1 ? props[1].Trim() : string.Empty;
-            this.FlagEmoji = props.Length > 2 ? props[2].Trim() : string.Empty;
+            this.Name = datos.Length > 0 ? datos[0].Trim() : string.Empty;
+            this.Group = datos.Length > 1 ? datos[1].Trim() : string.Empty;
+            this.FlagEmoji = datos.Length > 2 ? datos[2].Trim() : string.Empty;
         }
 
         public string Name { get; set; }

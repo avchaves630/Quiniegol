@@ -52,8 +52,6 @@ namespace Quiniegol.Views
             this.tabGroups = new System.Windows.Forms.TabPage();
             this.cmbGroupSelect = new System.Windows.Forms.ComboBox();
             this.dgvGroupStandings = new System.Windows.Forms.DataGridView();
-            this.tabBrackets = new System.Windows.Forms.TabPage();
-            this.dgvBrackets = new System.Windows.Forms.DataGridView();
             this.lblMatchesTitle = new System.Windows.Forms.Label();
             this.pnlRankings = new System.Windows.Forms.Panel();
             this.dgvRankings = new System.Windows.Forms.DataGridView();
@@ -86,8 +84,6 @@ namespace Quiniegol.Views
             ((System.ComponentModel.ISupportInitialize)(this.dgvNext24)).BeginInit();
             this.tabGroups.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroupStandings)).BeginInit();
-            this.tabBrackets.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBrackets)).BeginInit();
             this.pnlRankings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRankings)).BeginInit();
             this.pnlLeagues.SuspendLayout();
@@ -376,10 +372,8 @@ namespace Quiniegol.Views
             this.tabMatchesSub.Controls.Add(this.tabLast5);
             this.tabMatchesSub.Controls.Add(this.tabNext24);
             this.tabMatchesSub.Controls.Add(this.tabGroups);
-            this.tabMatchesSub.Controls.Add(this.tabBrackets);
             this.tabMatchesSub.Location = new System.Drawing.Point(25, 60);
             this.tabMatchesSub.Name = "tabMatchesSub";
-            this.tabMatchesSub.SelectedIndex = 0;
             this.tabMatchesSub.Size = new System.Drawing.Size(730, 440);
             this.tabMatchesSub.TabIndex = 3;
             this.tabMatchesSub.SelectedIndexChanged += new System.EventHandler(this.tabMatchesSub_SelectedIndexChanged);
@@ -457,25 +451,6 @@ namespace Quiniegol.Views
             this.dgvGroupStandings.Name = "dgvGroupStandings";
             this.dgvGroupStandings.Size = new System.Drawing.Size(680, 345);
             this.dgvGroupStandings.TabIndex = 0;
-            // 
-            // tabBrackets
-            // 
-            this.tabBrackets.Controls.Add(this.dgvBrackets);
-            this.tabBrackets.Location = new System.Drawing.Point(4, 22);
-            this.tabBrackets.Name = "tabBrackets";
-            this.tabBrackets.Size = new System.Drawing.Size(722, 414);
-            this.tabBrackets.TabIndex = 3;
-            this.tabBrackets.Text = "Cruces Fases Finales";
-            this.tabBrackets.UseVisualStyleBackColor = true;
-            // 
-            // dgvBrackets
-            // 
-            this.dgvBrackets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBrackets.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBrackets.Location = new System.Drawing.Point(0, 0);
-            this.dgvBrackets.Name = "dgvBrackets";
-            this.dgvBrackets.Size = new System.Drawing.Size(722, 414);
-            this.dgvBrackets.TabIndex = 0;
             // 
             // lblMatchesTitle
             // 
@@ -653,8 +628,6 @@ namespace Quiniegol.Views
             ((System.ComponentModel.ISupportInitialize)(this.dgvNext24)).EndInit();
             this.tabGroups.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroupStandings)).EndInit();
-            this.tabBrackets.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBrackets)).EndInit();
             this.pnlRankings.ResumeLayout(false);
             this.pnlRankings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRankings)).EndInit();
@@ -700,11 +673,9 @@ namespace Quiniegol.Views
         private System.Windows.Forms.TabPage tabNext24;
         private System.Windows.Forms.DataGridView dgvNext24;
         private System.Windows.Forms.TabPage tabGroups;
-        private System.Windows.Forms.TabPage tabBrackets;
         private System.Windows.Forms.Label lblMatchesTitle;
         private System.Windows.Forms.DataGridView dgvGroupStandings;
         private System.Windows.Forms.ComboBox cmbGroupSelect;
-        private System.Windows.Forms.DataGridView dgvBrackets;
         private System.Windows.Forms.DataGridView dgvRankings;
         private System.Windows.Forms.Label lblRankingsTitle;
         private System.Windows.Forms.ListBox lstLeagues;

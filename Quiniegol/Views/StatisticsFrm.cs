@@ -16,22 +16,33 @@ namespace Quiniegol.Views
         private List<User> Users { get; set; }
         private StatisticsController StatisticsController { get; set; }
 
-        public StatisticsFrm(List<Match> matches, List<Prediction> predictions, List<User> users)
+        public StatisticsFrm()
         {
             InitializeComponent();
+            this.StatisticsController = new StatisticsController();
+        }
+
+        public StatisticsFrm(List<Match> matches, List<Prediction> predictions, List<User> users)
+            : this()
+        {
             this.Matches = matches;
             this.Predictions = predictions;
             this.Users = users;
-            this.StatisticsController = new StatisticsController();
         }
 
         private void StatisticsFrm_Load(object sender, EventArgs e)
         {
+            if (DesignMode || System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime)
+                return;
+
             this.StartPosition = FormStartPosition.CenterParent;
             dtpStart.Value = new DateTime(2026, 7, 10, 0, 0, 0);
             dtpEnd.Value = new DateTime(2026, 7, 30, 23, 59, 59);
 
-            ComputeAndDisplayStats();
+            if (Matches != null && Predictions != null && Users != null)
+            {
+                ComputeAndDisplayStats();
+            }
         }
 
         private void btnCompute_Click(object sender, EventArgs e)

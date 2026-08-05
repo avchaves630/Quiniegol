@@ -66,12 +66,7 @@ namespace Quiniegol.Controllers
             if (index >= 0)
             {
                 this.Matches[index] = match;
-                bool updated = this.MatchHandler.Update(MatchesFilePath, match);
-                if (updated)
-                {
-                    CheckAndGenerateNextStage();
-                }
-                return updated;
+                return this.MatchHandler.Update(MatchesFilePath, match);
             }
             else
             {
@@ -166,92 +161,6 @@ namespace Quiniegol.Controllers
                 .ThenByDescending(r => r.GoalsFor)
                 .ThenBy(r => r.TeamName)
                 .ToList();
-        }
-
-        /// <summary>
-        /// Analiza el estado del torneo y genera dinámicamente los partidos de las siguientes fases.
-        /// </summary>
-        public void CheckAndGenerateNextStage()
-        {
-            var groupStageMatches = this.Matches.Where(m => m.Stage.StartsWith("Group", StringComparison.OrdinalIgnoreCase)).ToList();
-            bool groupStageFinished = groupStageMatches.Count > 0 && groupStageMatches.All(m => m.IsFinished);
-
-            if (groupStageFinished && !this.Matches.Any(m => m.Stage.Equals("Quarterfinals", StringComparison.OrdinalIgnoreCase)))
-            {
-                var standA = GetStandingsForGroup("A");
-                var standB = GetStandingsForGroup("B");
-                var standC = GetStandingsForGroup("C");
-                var standD = GetStandingsForGroup("D");
-
-                if (standA.Count >= 2 && standB.Count >= 2 && standC.Count >= 2 && standD.Count >= 2)
-                {
-                    string t1A = standA[0].TeamName;
-                    string t2A = standA[1].TeamName;
-                    string t1B = standB[0].TeamName;
-                    string t2B = standB[1].TeamName;
-                    string t1C = standC[0].TeamName;
-                    string t2C = standC[1].TeamName;
-                    string t1D = standD[0].TeamName;
-                    string t2D = standD[1].TeamName;
-
-                    var qf1 = new Match(17, t1A, t2B, null, null, SimulatedSystemDate.AddDays(2), new List<string>(), false, "Quarterfinals");
-                    var qf2 = new Match(18, t1C, t2D, null, null, SimulatedSystemDate.AddDays(2), new List<string>(), false, "Quarterfinals");
-                    var qf3 = new Match(19, t1B, t2A, null, null, SimulatedSystemDate.AddDays(3), new List<string>(), false, "Quarterfinals");
-                    var qf4 = new Match(20, t1D, t2C, null, null, SimulatedSystemDate.AddDays(3), new List<string>(), false, "Quarterfinals");
-
-                    this.Matches.Add(qf1);
-                    this.Matches.Add(qf2);
-                    this.Matches.Add(qf3);
-                    this.Matches.Add(qf4);
-
-                    this.MatchHandler.Create(MatchesFilePath, qf1);
-                    this.MatchHandler.Create(MatchesFilePath, qf2);
-                    this.MatchHandler.Create(MatchesFilePath, qf3);
-                    this.MatchHandler.Create(MatchesFilePath, qf4);
-                }
-            }
-
-            var qfMatches = this.Matches.Where(m => m.Stage.Equals("Quarterfinals", StringComparison.OrdinalIgnoreCase)).ToList();
-            bool qfFinished = qfMatches.Count == 4 && qfMatches.All(m => m.IsFinished);
-
-            if (qfFinished && !this.Matches.Any(m => m.Stage.Equals("Semifinals", StringComparison.OrdinalIgnoreCase)))
-            {
-                string w17 = GetWinner(qfMatches.Find(m => m.Id == 17));
-                string w18 = GetWinner(qfMatches.Find(m => m.Id == 18));
-                string w19 = GetWinner(qfMatches.Find(m => m.Id == 19));
-                string w20 = GetWinner(qfMatches.Find(m => m.Id == 20));
-
-                var sf1 = new Match(21, w17, w18, null, null, SimulatedSystemDate.AddDays(2), new List<string>(), false, "Semifinals");
-                var sf2 = new Match(22, w19, w20, null, null, SimulatedSystemDate.AddDays(3), new List<string>(), false, "Semifinals");
-
-                this.Matches.Add(sf1);
-                this.Matches.Add(sf2);
-
-                this.MatchHandler.Create(MatchesFilePath, sf1);
-                this.MatchHandler.Create(MatchesFilePath, sf2);
-            }
-
-            var sfMatches = this.Matches.Where(m => m.Stage.Equals("Semifinals", StringComparison.OrdinalIgnoreCase)).ToList();
-            bool sfFinished = sfMatches.Count == 2 && sfMatches.All(m => m.IsFinished);
-
-            if (sfFinished && !this.Matches.Any(m => m.Stage.Equals("Final", StringComparison.OrdinalIgnoreCase)))
-            {
-                string w21 = GetWinner(sfMatches.Find(m => m.Id == 21));
-                string w22 = GetWinner(sfMatches.Find(m => m.Id == 22));
-
-                var final = new Match(23, w21, w22, null, null, SimulatedSystemDate.AddDays(2), new List<string>(), false, "Final");
-
-                this.Matches.Add(final);
-                this.MatchHandler.Create(MatchesFilePath, final);
-            }
-        }
-
-        private string GetWinner(Match m)
-        {
-            if (m == null || !m.HomeScore.HasValue || !m.AwayScore.HasValue) return "TBD";
-            if (m.HomeScore.Value > m.AwayScore.Value) return m.HomeTeam;
-            if (m.HomeScore.Value < m.AwayScore.Value) return m.AwayTeam;
-            return m.HomeTeam;
         }
     }
 }

@@ -16,33 +16,33 @@ namespace Quiniegol.Models
             this.DateCreated = dateCreated;
         }
 
-        public Prediction(string[] props)
+        public Prediction(string[] datos)
         {
-            this.Username = props.Length > 0 ? props[0].Trim() : string.Empty;
+            this.Username = datos.Length > 0 ? datos[0].Trim() : string.Empty;
 
             int matchId = 0;
-            if (props.Length > 1 && !string.IsNullOrWhiteSpace(props[1]) && int.TryParse(props[1].Trim(), out int parsedId))
+            if (datos.Length > 1 && !string.IsNullOrWhiteSpace(datos[1]) && int.TryParse(datos[1].Trim(), out int parsedId))
             {
                 matchId = parsedId;
             }
             this.MatchId = matchId;
 
             int homeP = 0;
-            if (props.Length > 2 && !string.IsNullOrWhiteSpace(props[2]) && int.TryParse(props[2].Trim(), out int parsedHome))
+            if (datos.Length > 2 && !string.IsNullOrWhiteSpace(datos[2]) && int.TryParse(datos[2].Trim(), out int parsedHome))
             {
                 homeP = parsedHome;
             }
             this.PredictedHomeScore = homeP;
 
             int awayP = 0;
-            if (props.Length > 3 && !string.IsNullOrWhiteSpace(props[3]) && int.TryParse(props[3].Trim(), out int parsedAway))
+            if (datos.Length > 3 && !string.IsNullOrWhiteSpace(datos[3]) && int.TryParse(datos[3].Trim(), out int parsedAway))
             {
                 awayP = parsedAway;
             }
             this.PredictedAwayScore = awayP;
 
             DateTime dt = DateTime.Now;
-            if (props.Length > 4 && !string.IsNullOrWhiteSpace(props[4]) && DateTime.TryParse(props[4].Trim(), out DateTime parsedDt))
+            if (datos.Length > 4 && !string.IsNullOrWhiteSpace(datos[4]) && DateTime.TryParse(datos[4].Trim(), out DateTime parsedDt))
             {
                 dt = parsedDt;
             }

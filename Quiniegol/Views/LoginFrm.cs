@@ -16,9 +16,14 @@ namespace Quiniegol.Views
         private PredictionController PredictionController { get; set; }
         private QuinielaController QuinielaController { get; set; }
 
-        public LoginFrm(LoginController loginController, MatchController matchController, PredictionController predictionController, QuinielaController quinielaController)
+        public LoginFrm()
         {
             InitializeComponent();
+        }
+
+        public LoginFrm(LoginController loginController, MatchController matchController, PredictionController predictionController, QuinielaController quinielaController)
+            : this()
+        {
             this.LoginController = loginController;
             this.MatchController = matchController;
             this.PredictionController = predictionController;

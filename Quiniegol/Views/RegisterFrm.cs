@@ -14,21 +14,28 @@ namespace Quiniegol.Views
     {
         private LoginController LoginController { get; set; }
 
-        public RegisterFrm(LoginController loginController, List<Team> teams)
+        public RegisterFrm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        public RegisterFrm(LoginController loginController, List<Team> teams) : this()
+        {
             this.LoginController = loginController;
 
-            cmbCountry.Items.Clear();
-            foreach (var team in teams)
+            if (teams != null)
             {
-                cmbCountry.Items.Add(team.Name);
+                cmbCountry.Items.Clear();
+                foreach (var team in teams)
+                {
+                    cmbCountry.Items.Add(team.Name);
+                }
+                if (cmbCountry.Items.Count > 0)
+                {
+                    cmbCountry.SelectedIndex = 0;
+                }
             }
-            if (cmbCountry.Items.Count > 0)
-            {
-                cmbCountry.SelectedIndex = 0;
-            }
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnSave_Click(object sender, EventArgs e)

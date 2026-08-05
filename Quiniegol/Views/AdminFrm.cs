@@ -18,9 +18,14 @@ namespace Quiniegol.Views
         private PredictionController PredictionController { get; set; }
         private QuinielaController QuinielaController { get; set; }
 
-        public AdminFrm(MatchController matchController, UserController userController, PredictionController predictionController, QuinielaController quinielaController)
+        public AdminFrm()
         {
             InitializeComponent();
+        }
+
+        public AdminFrm(MatchController matchController, UserController userController, PredictionController predictionController, QuinielaController quinielaController)
+            : this()
+        {
             this.MatchController = matchController;
             this.UserController = userController;
             this.PredictionController = predictionController;
@@ -29,9 +34,15 @@ namespace Quiniegol.Views
 
         private void AdminFrm_Load(object sender, EventArgs e)
         {
+            if (DesignMode || System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime)
+                return;
+
             this.StartPosition = FormStartPosition.CenterParent;
-            dtpSimulatedDate.Value = MatchController.SimulatedSystemDate;
-            RefreshMatchesGrid();
+            if (MatchController != null)
+            {
+                dtpSimulatedDate.Value = MatchController.SimulatedSystemDate;
+                RefreshMatchesGrid();
+            }
         }
 
         private void RefreshMatchesGrid()
